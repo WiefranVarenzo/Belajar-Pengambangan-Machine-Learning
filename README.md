@@ -217,3 +217,55 @@ plt.show()
 ```
 
 ---
+## 5. Metode Sentiment Analysis
+
+Kami mengembangkan 3 pendekatan *deep learning* berbeda untuk melakukan analisis sentimen pada ulasan pengguna:
+
+### 5.1 RCNN + FastText
+
+- **RCNN (Recurrent Convolutional Neural Network)**:  
+  Menggabungkan kekuatan *convolutional layers* untuk menangkap informasi lokal (seperti frasa) dan *recurrent layers* untuk memahami konteks sekuensial yang lebih panjang.
+
+- **FastText**:  
+  Digunakan untuk membuat representasi kata (*word embeddings*). FastText mempertimbangkan informasi sub-kata (*subword information*) sehingga cocok untuk bahasa Indonesia yang banyak bentuk kata turunan.
+
+- **Pipeline**:
+  - Embedding layer: Pre-trained FastText embeddings.
+  - Convolutional layer.
+  - Recurrent layer (LSTM atau GRU).
+  - Fully connected layer.
+  - Output: Sentiment class (Positive, Negative, Neutral).
+
+---
+
+### 5.2 GRU + GloVe
+
+- **GRU (Gated Recurrent Unit)**:  
+  Versi ringan dari LSTM, lebih cepat dalam training tanpa mengorbankan banyak performa.
+
+- **GloVe (Global Vectors for Word Representation)**:  
+  Menggunakan representasi kata berbasis statistik global untuk menghasilkan embedding yang akurat.
+
+- **Pipeline**:
+  - Embedding layer: Pre-trained GloVe embeddings.
+  - GRU layer.
+  - Fully connected layer.
+  - Output: Sentiment class (Positive, Negative, Neutral).
+
+---
+
+### 3.3 LSTM + Word2Vec
+
+- **LSTM (Long Short-Term Memory)**:  
+  Salah satu model RNN paling kuat untuk memahami *long-term dependencies* dalam teks.
+
+- **Word2Vec**:  
+  Membuat representasi kata berdasarkan konteks kata-kata sekitar
+
+- **Pipeline**:
+  - Embedding layer: Pre-trained Word2Vec embeddings.
+  - LSTM layer.
+  - Fully connected layer.
+  - Output: Sentiment class (Positive, Negative, Neutral).
+
+---
