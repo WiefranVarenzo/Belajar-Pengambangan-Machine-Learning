@@ -254,7 +254,7 @@ Kami mengembangkan 3 pendekatan *deep learning* berbeda untuk melakukan analisis
 
 ---
 
-### 3.3 LSTM + Word2Vec
+### 5.3 LSTM + Word2Vec
 
 - **LSTM (Long Short-Term Memory)**:  
   Salah satu model RNN paling kuat untuk memahami *long-term dependencies* dalam teks.
