@@ -24,10 +24,15 @@ Membersihkan teks dari:
 
 **Fungsi:** `cleaningText(text)`
 
+---
+
 ## 2. Case Folding
 Mengubah semua huruf menjadi huruf kecil (lowercase) agar konsisten.
+
 **Fungsi:** `casefoldingText(text)`
+
 ---
+
 ## 3. Slang Words Normalization
 Mengganti kata-kata gaul/slang menjadi bentuk baku, contoh:
 - `abis` ➔ `habis`
